@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="header">
+    <h1>Digital Nurture - Angular</h1>
+    <p>Complete Angular Hands-on Dashboard</p>
+  </div>
+  
+  <div class="grid">
+    <div class="card" *ngFor="let mod of modules">
+      <h3>{{ mod.title }}</h3>
+      <p>{{ mod.desc }}</p>
+      <div class="status-badge">Completed</div>
+    </div>
+  </div>
+</div>
