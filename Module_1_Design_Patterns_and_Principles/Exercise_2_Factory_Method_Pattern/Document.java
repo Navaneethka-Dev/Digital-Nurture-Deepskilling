@@ -1,3 +1,3 @@
-public interface Document { 
-    void print(); 
+public interface Document {
+    void open();
 }
