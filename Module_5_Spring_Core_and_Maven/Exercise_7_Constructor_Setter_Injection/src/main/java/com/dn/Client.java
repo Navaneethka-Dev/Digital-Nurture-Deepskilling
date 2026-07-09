@@ -4,8 +4,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Client {
-    private final ServiceA serviceA; // Constructor injection
-    private ServiceB serviceB; // Setter injection
+    private final ServiceA serviceA;
+    private ServiceB serviceB;
 
     @Autowired
     public Client(ServiceA serviceA) { this.serviceA = serviceA; }

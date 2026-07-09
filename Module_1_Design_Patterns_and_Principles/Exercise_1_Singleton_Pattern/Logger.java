@@ -2,7 +2,6 @@ public class Logger {
     private static Logger instance;
 
     private Logger() {
-        // private constructor
     }
 
     public static Logger getInstance() {

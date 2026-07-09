@@ -9,7 +9,7 @@ import java.util.List;
 public class CountryController {
 
     @Autowired
-    private Country defaultCountry; // Loaded from XML
+    private Country defaultCountry;
     
     private List<Country> countries = new ArrayList<>();
 
@@ -18,13 +18,11 @@ public class CountryController {
         countries.add(new Country("UK", "United Kingdom"));
     }
 
-    // Hello World RESTful Web Service
     @GetMapping("/hello")
     public String helloWorld() {
         return "Hello World!";
     }
 
-    // REST - Country Web Service (Get All)
     @GetMapping("/countries")
     public List<Country> getAllCountries() {
         List<Country> all = new ArrayList<>(countries);
@@ -32,7 +30,6 @@ public class CountryController {
         return all;
     }
 
-    // REST - Get country based on country code
     @GetMapping("/countries/{code}")
     public Country getCountry(@PathVariable String code) {
         if(code.equalsIgnoreCase(defaultCountry.getCode())) return defaultCountry;
