@@ -7,9 +7,6 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * Validates that the JUnit 5 testing framework is correctly configured and operational.
- */
 @DisplayName("JUnit 5 Environment Setup Tests")
 public class SetupTest {
     
@@ -24,7 +21,6 @@ public class SetupTest {
     @DisplayName("Verify Test Execution Pipeline")
     void testFrameworkInitialization() {
         log.info("Executing testFrameworkInitialization...");
-        // Simple print out for console verification
         System.out.println("✅ JUnit 5 framework is fully operational and tests are running successfully.");
     }
     

@@ -1,6 +1,3 @@
-/**
- * Represents a Microsoft Word document.
- */
 public class WordDocument implements Document {
     @Override
     public void print() { 

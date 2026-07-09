@@ -7,9 +7,6 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Demonstrates the usage of various assertions available in JUnit 5.
- */
 @DisplayName("JUnit 5 Assertions Demonstration")
 public class AssertionsTest {
 

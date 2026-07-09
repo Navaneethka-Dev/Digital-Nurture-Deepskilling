@@ -1,4 +1,3 @@
--- Exercise 1: Control Structures with enhanced logic and formatting
 SET SERVEROUTPUT ON;
 
 DECLARE
@@ -7,7 +6,6 @@ DECLARE
 BEGIN
    DBMS_OUTPUT.PUT_LINE('--- Starting Control Structures Test ---');
    
-   -- If-Else Control Structure
    IF v_test_number > 10 THEN
       DBMS_OUTPUT.PUT_LINE('Result: The provided number (' || v_test_number || ') is strictly greater than 10.');
    ELSIF v_test_number = 10 THEN
@@ -18,7 +16,6 @@ BEGIN
    
    DBMS_OUTPUT.PUT_LINE('--- Commencing Loop Execution ---');
    
-   -- FOR Loop Structure
    FOR i IN 1..v_iteration_limit LOOP
       DBMS_OUTPUT.PUT_LINE('-> Executing iteration pass: ' || i);
    END LOOP;

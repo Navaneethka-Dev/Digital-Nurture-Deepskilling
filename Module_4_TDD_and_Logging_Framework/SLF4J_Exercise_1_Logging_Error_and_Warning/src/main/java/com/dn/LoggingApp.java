@@ -3,12 +3,8 @@ package com.dn;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * Main application demonstrating various SLF4J logging levels.
- */
 public class LoggingApp {
     
-    // Create a logger instance for this class
     private static final Logger appLogger = LoggerFactory.getLogger(LoggingApp.class);
     
     public static void main(String[] args) {
@@ -27,7 +23,6 @@ public class LoggingApp {
         appLogger.debug("Performing initial diagnostic checks.");
         appLogger.warn("System memory is running below optimal thresholds (Warning).");
         
-        // Simulating an exception
         throw new Exception("Simulated Diagnostic Failure");
     }
 }
