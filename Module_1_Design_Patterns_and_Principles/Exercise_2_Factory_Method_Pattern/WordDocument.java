@@ -1,3 +1,9 @@
+/**
+ * Represents a Microsoft Word document.
+ */
 public class WordDocument implements Document {
-    public void print() { System.out.println("Printing Word Document."); }
+    @Override
+    public void print() { 
+        System.out.println("--> [Word Printer]: Spooling and printing Word Document pages..."); 
+    }
 }

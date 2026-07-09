@@ -1,3 +1,9 @@
+/**
+ * Represents a Portable Document Format (PDF) document.
+ */
 public class PdfDocument implements Document {
-    public void print() { System.out.println("Printing PDF Document."); }
+    @Override
+    public void print() { 
+        System.out.println("--> [PDF Printer]: Rendering and printing PDF Document contents..."); 
+    }
 }

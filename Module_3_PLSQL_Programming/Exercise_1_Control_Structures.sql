@@ -1,14 +1,31 @@
+-- Exercise 1: Control Structures with enhanced logic and formatting
+SET SERVEROUTPUT ON;
+
 DECLARE
-   num_val NUMBER := 10;
+   v_test_number NUMBER := 15;
+   v_iteration_limit NUMBER := 5;
 BEGIN
-   IF num_val > 5 THEN
-      DBMS_OUTPUT.PUT_LINE('Number is greater than 5');
+   DBMS_OUTPUT.PUT_LINE('--- Starting Control Structures Test ---');
+   
+   -- If-Else Control Structure
+   IF v_test_number > 10 THEN
+      DBMS_OUTPUT.PUT_LINE('Result: The provided number (' || v_test_number || ') is strictly greater than 10.');
+   ELSIF v_test_number = 10 THEN
+      DBMS_OUTPUT.PUT_LINE('Result: The provided number is exactly 10.');
    ELSE
-      DBMS_OUTPUT.PUT_LINE('Number is 5 or less');
+      DBMS_OUTPUT.PUT_LINE('Result: The provided number is less than 10.');
    END IF;
    
-   FOR i IN 1..5 LOOP
-      DBMS_OUTPUT.PUT_LINE('Iteration: ' || i);
+   DBMS_OUTPUT.PUT_LINE('--- Commencing Loop Execution ---');
+   
+   -- FOR Loop Structure
+   FOR i IN 1..v_iteration_limit LOOP
+      DBMS_OUTPUT.PUT_LINE('-> Executing iteration pass: ' || i);
    END LOOP;
+   
+   DBMS_OUTPUT.PUT_LINE('--- Execution Completed ---');
+EXCEPTION
+   WHEN OTHERS THEN
+      DBMS_OUTPUT.PUT_LINE('An unexpected error occurred: ' || SQLERRM);
 END;
 /
