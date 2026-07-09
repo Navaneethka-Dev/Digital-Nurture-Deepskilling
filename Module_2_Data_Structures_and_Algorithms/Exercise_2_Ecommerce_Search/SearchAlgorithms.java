@@ -1,32 +1,26 @@
 public class SearchAlgorithms {
-    public static int linearSearch(int[] elements, int target) {
-        if (elements == null || elements.length == 0) return -1;
-        
-        for (int index = 0; index < elements.length; index++) {
-            if (elements[index] == target) {
-                return index;
+    public static Product linearSearch(Product[] products, int targetId) {
+        for (Product product : products) {
+            if (product.getProductId() == targetId) {
+                return product;
             }
         }
-        return -1;
+        return null;
     }
     
-    public static int binarySearch(int[] sortedElements, int target) {
-        if (sortedElements == null || sortedElements.length == 0) return -1;
-        
-        int startIndex = 0;
-        int endIndex = sortedElements.length - 1;
-        
-        while (startIndex <= endIndex) {
-            int middleIndex = startIndex + (endIndex - startIndex) / 2;
-            
-            if (sortedElements[middleIndex] == target) {
-                return middleIndex;
-            } else if (sortedElements[middleIndex] < target) {
-                startIndex = middleIndex + 1;
+    public static Product binarySearch(Product[] sortedProducts, int targetId) {
+        int left = 0;
+        int right = sortedProducts.length - 1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (sortedProducts[mid].getProductId() == targetId) {
+                return sortedProducts[mid];
+            } else if (sortedProducts[mid].getProductId() < targetId) {
+                left = mid + 1;
             } else {
-                endIndex = middleIndex - 1;
+                right = mid - 1;
             }
         }
-        return -1;
+        return null;
     }
 }
