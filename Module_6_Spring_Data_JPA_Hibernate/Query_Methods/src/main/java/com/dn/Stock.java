@@ -28,7 +28,7 @@ public class Stock {
     @Column(name="st_volume")
     private Long volume;
 
-    // Getters and setters
+    
     public Integer getId() { return id; }
     public void setId(Integer id) { this.id = id; }
 

@@ -18,11 +18,11 @@ public class AAATest {
 
     @Test
     public void testAddition() {
-        // Arrange
+        
         int amount = 5;
-        // Act
+        
         value += amount;
-        // Assert
+        
         assertEquals(15, value);
     }
 }
